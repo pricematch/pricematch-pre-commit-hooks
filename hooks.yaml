@@ -10,6 +10,6 @@
   files: \.(rb|rake)$
 - id: pylint
   name: pylint
-  entry: ../../../../../usr/bin/pylint
+  entry: pylint.py
   language: script
   files: \.py$
