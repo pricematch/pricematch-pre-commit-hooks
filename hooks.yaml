@@ -6,5 +6,5 @@
 - id: bump_version
   name: Bump Version
   entry: bump_version.py
-  language: python
+  language: script
   files: ^assets/VERSION$
