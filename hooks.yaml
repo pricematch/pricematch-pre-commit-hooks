@@ -2,4 +2,4 @@
   name: Block if "DO NOT COMMIT" is found
   entry: DO NOT COMMIT
   language: pcre
-  files: *
+  files: ^(.*)$
