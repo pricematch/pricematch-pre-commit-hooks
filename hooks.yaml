@@ -3,3 +3,8 @@
   entry: DO NOT COMMIT
   language: pcre
   files: ^(.*)$
+- id: ruby_timezones
+  name: Force explicit usage of timezones
+  entry: "(Date.today|Time.now|DateTime.now)([ ,)]|$)"
+  language: pcre
+  files: \.rb$
