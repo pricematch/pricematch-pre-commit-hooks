@@ -8,3 +8,8 @@
   entry: "(Date.today|Time.now|DateTime.now)([ ,)]|$)"
   language: pcre
   files: \.(rb|rake)$
+- id: pylint
+  name: pylint
+  entry: pylint
+  language: script
+  files: \.py$
