@@ -3,8 +3,3 @@
   entry: DO NOT COMMIT
   language: pcre
   files: ^(.*)$
-- id: bump_version
-  name: Bump Version
-  entry: bump_version.py
-  language: script
-  files: ^assets/VERSION$
