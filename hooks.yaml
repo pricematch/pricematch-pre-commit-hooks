@@ -8,3 +8,8 @@
   entry: "(Date.today|Time.now|DateTime.now)([ ,)]|$)"
   language: pcre
   files: \.(rb|rake)$
+- id: rubocop
+  name: rubocop
+  entry: rubocop
+  language: ruby
+  files: \.(rb|rake)$
