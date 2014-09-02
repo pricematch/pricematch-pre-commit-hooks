@@ -8,11 +8,6 @@
   entry: "(Date.today|Time.now|DateTime.now)([ ,)]|$)"
   language: pcre
   files: \.(rb|rake)$
-- id: pylint
-  name: pylint
-  entry: pylint.py
-  language: script
-  files: \.py$
 - id: ruby
   name: ruby_syntax
   entry: ruby.py
