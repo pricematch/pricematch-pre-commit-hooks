@@ -18,3 +18,8 @@
   entry: Reservation\.([^m]...|.[^a]..|..[^s].|...[^s])
   language: pcre
   files: ^lib/background_jobs/parsing/drivers/.*\.rb$
+- id: check_rails_env_with_methods
+  name: Do not write "Rails.env =" to avoid assignment
+  entry: Rails\.env\s*=
+  language: pcre
+  files: \.(rb|rake)$
