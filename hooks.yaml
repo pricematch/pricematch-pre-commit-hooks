@@ -2,7 +2,7 @@
   name: Block if "DO NOT COMMIT" is found
   entry: DO NOT COMMIT
   language: pcre
-  files: ^(.*)$
+  files: ''
 - id: ruby_timezones
   name: Force explicit usage of timezones
   entry: "(Date.today|Time.now|DateTime.now)([ ,)]|$)"
