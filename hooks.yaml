@@ -23,3 +23,8 @@
   entry: Rails\.env\s*=
   language: pcre
   files: \.(rb|rake)$
+- id: remove_encoding_comment
+  name: Remove the encoding comment at beginning of file
+  entry: encoding\s*\:\s*utf\-8
+  language: pcre
+  files: \.(rb|rake)$
