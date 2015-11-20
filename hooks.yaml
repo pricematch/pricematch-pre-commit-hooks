@@ -19,6 +19,12 @@
   language: pcre
   files: ^lib/background_jobs/parsing/drivers/.*\.rb$
   args: [-bzo]
+- id: no_commas_in_string_arrays
+  name: Do not forget a comma in a %w() string array
+  entry: \%w\([^(]*,[^(]*\)
+  language: pcre
+  files: \.(rb|rake)$
+  args: [-bzo]
 - id: check_rails_env_with_methods
   name: Do not write "Rails.env =" to avoid assignment
   entry: Rails\.env\s*=
