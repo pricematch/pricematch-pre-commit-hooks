@@ -15,7 +15,7 @@
   files: \.(rb|rake)$
 - id: safe_where_queries_in_parsing
   name: Only allowed model method is mass_insert in parsing
-  entry: Reservation\s*\.([^m]...|.[^a]..|..[^s].|...[^s])
+  entry: Reservation\s*\.(?!(mass|calendar|hotel_pms_res|set_canceled|update_from)).*
   language: pcre
   files: ^lib/background_jobs/parsing/drivers/.*\.rb$
   args: [-bzo]
