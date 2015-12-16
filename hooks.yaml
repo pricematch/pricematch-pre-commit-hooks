@@ -17,7 +17,7 @@
   name: Only allowed model method is mass_insert in parsing
   entry: Reservation\s*\.(?!(mass|calendar|hotel_pms_res|set_canceled|update_from)).*
   language: pcre
-  files: ^lib/background_jobs/parsing/drivers/.*\.rb$
+  files: \.rb$
   args: [-bzo]
 - id: no_commas_in_string_arrays
   name: Do not forget a comma in a %w() string array
