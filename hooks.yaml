@@ -42,6 +42,7 @@
   files: \.js$
 - id: include_rails_helper_in_tests
   name: Start your spec files with the line `include 'rails_helper'`
-  entry: ^?!(require 'rails_helper'\n)
+  entry: \A(?!(require\s\'rails_helper\')).*
   language: pcre
   files: spec\.rb$
+  args: [-bzo]
