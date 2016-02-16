@@ -46,3 +46,9 @@
   language: pcre
   files: spec\.rb$
   args: [-bzo]
+- id: no_puts_statements
+  name: Do not leave puts statements in production code
+  entry: "[.\\s]?puts[(\\s]?.*"
+  language: pcre
+  files: \.rb$
+  args: [-bzo]
