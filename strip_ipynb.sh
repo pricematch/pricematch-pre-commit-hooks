@@ -1,2 +1,3 @@
 #! /bin/sh
-python strip_ipynb.py $@
+script=$(dirname "$0")'/strip_ipynb.py'
+python $script $@
