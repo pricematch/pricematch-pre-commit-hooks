@@ -2,9 +2,6 @@
 import json
 import sys
 
-# notebook = sys.stdin.read()
-# json_in = json.loads(notebook)
-
 files = sys.argv[1:]
 
 def strip_output_from_cell(cell):
@@ -18,8 +15,11 @@ def strip_output_from_cell(cell):
         del cell['prompt_number']
 
 def clean_notebook(file):
-    notebook = json.loads(open(file, 'r').read())
-    cells = notebook['worksheets'][0]['cells'] if 'worksheets' in json_in else json_in['cells']
+    notebook = json.load(open(file, 'r'))
+    cells = notebook['worksheets'][0]['cells'] if 'worksheets' in notebook else notebook['cells']
     for cell in cells:
         strip_output_from_cell(cell)
     json.dump(notebook, open(file, 'w'), sort_keys=True, indent=1, separators=(',', ': '))
+
+for file in files:
+    clean_notebook(file)
