@@ -52,3 +52,8 @@
   language: pcre
   files: \.rb$
   args: [-bzo]
+- id: remove_ipython_notebook_outputs
+  name: Remove ipython notebook outputs
+  entry: strip_ipynb.sh
+  files: \.ipynb$
+  language: script
