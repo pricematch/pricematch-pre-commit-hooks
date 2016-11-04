@@ -57,3 +57,8 @@
   entry: strip_ipynb.sh
   files: \.ipynb$
   language: script
+- id: no_httparty
+  name: Use HypertextTransfer wrapper instead of HTTParty directly
+  entry: HTTParty
+  language: pcre
+  files: \.(rb|rake)$
