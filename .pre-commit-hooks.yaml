@@ -13,9 +13,9 @@
   entry: ruby.py
   language: script
   files: \.(rb|rake)$
-- id: safe_where_queries_in_parsing
-  name: Only allowed model method is mass_insert in parsing
-  entry: Reservation\s*\.(?!(mass|calendar|hotel_pms_res|set_canceled|update_from)).*
+- id: restrict_methods_on_reservation_table
+  name: Only allow limited methods on the Reservation model in parsing
+  entry: ^Reservation\s*\.(?!(mass|calendar|hotel_pms_res|set_canceled|update_from)).*
   language: pcre
   files: \.rb$
   args: [-bzo]
