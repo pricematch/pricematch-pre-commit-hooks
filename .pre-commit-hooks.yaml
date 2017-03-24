@@ -13,6 +13,12 @@
   entry: ruby.py
   language: script
   files: \.(rb|rake)$
+- id: safe_where_queries_in_parsing
+  name: Only allowed model method is mass_insert in parsing
+  entry: Reservation\s*\.(?!(mass|calendar|hotel_pms_res|set_canceled|update_from)).*
+  language: pcre
+  files: \.rb$
+  args: [-bzo]
 - id: no_commas_in_string_arrays
   name: Do not forget a comma in a %w() string array
   entry: \%w\([^)]*,[^)]*\)
