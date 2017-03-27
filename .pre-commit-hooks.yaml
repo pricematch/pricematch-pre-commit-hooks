@@ -15,7 +15,7 @@
   files: \.(rb|rake)$
 - id: restrict_methods_on_reservation_table
   name: Only allow limited methods on the Reservation model in parsing
-  entry: ^Reservation\s*\.(?!(mass|calendar|hotel_pms_res|set_canceled|update_from)).*
+  entry: \bReservation\s*\.(?!(mass|calendar|hotel_pms_res|set_canceled|update_from)).*
   language: pcre
   files: \.rb$
   args: [-bzo]
